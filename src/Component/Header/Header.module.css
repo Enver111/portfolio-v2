@@ -1,0 +1,54 @@
+:root {
+  --icon-color: black;
+}
+
+.dark {
+  filter: brightness(1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 41px;
+}
+.heder_btns {
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+}
+.btn {
+  padding: 0 15px;
+  cursor: pointer;
+  border: none;
+  background-color: unset;
+  color: rgb(102, 102, 102);
+  font-size: 20px;
+}
+.btn:hover {
+  background: linear-gradient(to right, rgb(19, 176, 245), rgb(66, 68, 110));
+  color: white;
+  border-radius: 6px;
+}
+.contscts {
+  display: flex;
+  gap: 20px;
+  margin: auto 0;
+}
+.hover img {
+  padding: 5px;
+  border-radius: 100%;
+  filter: brightness(0);
+}
+.hover:hover img {
+  background-color: red;
+  background: linear-gradient(to right, rgb(19, 176, 245), rgb(66, 68, 110));
+  filter: brightness(1);
+}
+.theme {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}

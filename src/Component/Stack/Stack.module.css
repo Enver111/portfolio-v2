@@ -1,0 +1,23 @@
+.stack {
+  margin-top: 100px;
+}
+.title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 800;
+  color: rgb(66, 68, 110);
+  margin: 0 0 40px 0;
+}
+.subtitle {
+  margin: 0 0 50px 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
+  color: rgb(102, 102, 102);
+}
+.stack_icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 71px 100px;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import Github from '../../Lib/Icon/contacts/github.svg';
 import Twitter from '../../Lib/Icon/contacts/twitter.svg';
 import Moon from '../../Lib/Icon/contacts/moon.svg';
+import Sun from '../../Lib/Icon/contacts/sun.svg';
 import s from './Header.module.css';
 import Logo from '../Logo/Logo';
 
@@ -37,7 +38,11 @@ export default function Header({ darkTheme, toggleTheme }) {
         </div>
         <div className={s.hover}>
           <button onClick={toggleTheme} className={s.theme}>
-            <img src={Moon} alt='moon' />
+            {darkTheme ? (
+              <img src={Sun} alt='Sun' />
+            ) : (
+              <img src={Moon} alt='moon' />
+            )}
           </button>
         </div>
       </div>

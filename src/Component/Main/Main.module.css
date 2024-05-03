@@ -1,7 +1,7 @@
 .main {
   display: flex;
   justify-content: space-between;
-  margin: 100px 0;
+  margin: 100px 0 0 0;
 }
 .about {
   font-size: 58px;

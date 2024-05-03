@@ -1,0 +1,30 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px 0;
+}
+.about {
+  font-size: 58px;
+  color: rgb(66, 68, 110);
+  font-weight: 800;
+  margin: auto 0;
+}
+.about span {
+  background: linear-gradient(to right, rgb(19, 176, 245), rgb(66, 68, 110));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.mainPhoto {
+  background: linear-gradient(to bottom, rgb(202, 36, 180), rgb(19, 176, 245));
+  border-radius: 50%;
+  height: 370px;
+}
+.mainPhoto img {
+  margin: 10px;
+  width: 350px;
+  height: 350px;
+  border-radius: 75%;
+}

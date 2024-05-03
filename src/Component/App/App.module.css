@@ -1,10 +1,11 @@
 .app {
-  max-width: 1200px;
-  margin: auto;
   background-color: white;
 }
-.app_dark {
+.container {
   max-width: 1200px;
   margin: auto;
+}
+.app_dark {
   background-color: black;
+  color: red !important;
 }

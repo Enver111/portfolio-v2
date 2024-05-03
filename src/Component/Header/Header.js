@@ -15,7 +15,7 @@ export default function Header({ darkTheme, toggleTheme }) {
   ];
 
   return (
-    <div className={darkTheme ? `${s.header} ${s.dark}` : s.header}>
+    <header className={darkTheme ? `${s.header} ${s.dark}` : s.header}>
       <Logo />
       <div className={s.heder_btns}>
         {items.map((item) => (
@@ -41,6 +41,6 @@ export default function Header({ darkTheme, toggleTheme }) {
           </button>
         </div>
       </div>
-    </div>
+    </header>
   );
 }

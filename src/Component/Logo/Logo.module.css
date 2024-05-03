@@ -1,0 +1,26 @@
+.logo {
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  background: linear-gradient(to right, rgb(19, 176, 245), rgb(202, 36, 180));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.logo_num {
+  box-sizing: border-box;
+  font-size: 35px;
+  font-weight: 700;
+  display: flex;
+  gap: 2px;
+}
+.logo div:last-child {
+  text-align: center;
+  font-size: 20px;
+  line-height: 10px;
+  font-weight: 700;
+}
+.logo_num span {
+  display: block;
+  padding: 2.5px 0;
+}

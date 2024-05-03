@@ -1,15 +1,6 @@
-:root {
-  --icon-color: black;
-}
-
-.dark {
-  filter: brightness(1);
-}
-
 .header {
   display: flex;
   justify-content: space-between;
-  margin-top: 41px;
 }
 .heder_btns {
   display: flex;

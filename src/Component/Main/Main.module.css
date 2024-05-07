@@ -21,10 +21,11 @@
   background: linear-gradient(to bottom, rgb(202, 36, 180), rgb(19, 176, 245));
   border-radius: 50%;
   height: 370px;
+  transition: transform 0.5s;
 }
 .mainPhoto img {
   margin: 10px;
   width: 350px;
   height: 350px;
-  border-radius: 75%;
+  border-radius: 50%;
 }

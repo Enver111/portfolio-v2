@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import HtmlIcon from '../../Lib/Icon/stack/Html.svg';
 import CssIcon from '../../Lib/Icon/stack/Css.svg';
 import JavaScriptIcon from '../../Lib/Icon/stack/JavaScript.svg';
@@ -13,6 +14,7 @@ import GitGubIcon from '../../Lib/Icon/stack/GitGub.svg';
 import s from './Stack.module.css';
 
 export default function Stack() {
+  const { t } = useTranslation();
   const items = [
     { id: 1, icon: HtmlIcon, alt: 'HtmlIcon' },
     { id: 2, icon: CssIcon, alt: 'CssIcon' },
@@ -29,9 +31,9 @@ export default function Stack() {
   ];
   return (
     <div className={s.stack}>
-      <h1 className={s.title}>Мой Технический Стек</h1>
+      <h1 className={s.title}>{t('My Tech Stack')}</h1>
       <h2 className={s.subtitle}>
-        Технологии, с которыми я работал в последнее время
+        {t('Technologies I’ve been working with recently')}
       </h2>
       <div className={s.stack_icons}>
         {items.map((item) => (

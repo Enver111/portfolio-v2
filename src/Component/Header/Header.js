@@ -1,21 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import Github from '../../Lib/Icon/contacts/github.svg';
 import Twitter from '../../Lib/Icon/contacts/twitter.svg';
 import Moon from '../../Lib/Icon/contacts/moon.svg';
 import Sun from '../../Lib/Icon/contacts/sun.svg';
-import s from './Header.module.css';
 import Logo from '../Logo/Logo';
 import Lang from '../Lang/Lang';
+import s from './Header.module.css';
 
 export default function Header({ darkTheme, toggleTheme }) {
-  const items = [
-    { id: 1, name: 'Home' },
-    { id: 2, name: 'About' },
-    { id: 3, name: 'Tech Stack' },
-    { id: 4, name: 'Projects' },
-    { id: 5, name: 'Contact' },
-  ];
+  const { t, i18n } = useTranslation();
+  const [currentLang, setCurrentLang] = useState(i18n.language);
 
+  useEffect(() => {
+    const handleLanguageChange = (lng) => {
+      setCurrentLang(lng);
+    };
+    i18n.on('languageChanged', handleLanguageChange);
+    return () => {
+      i18n.off('languageChanged', handleLanguageChange);
+    };
+  }, [i18n]);
+  const items = [
+    { id: 1, name: t('Home') },
+    { id: 2, name: t('About') },
+    { id: 3, name: t('Tech Stack') },
+    { id: 4, name: t('Projects') },
+    { id: 5, name: t('Contact') },
+  ];
   return (
     <header className={darkTheme ? `${s.header} ${s.dark}` : s.header}>
       <Logo />

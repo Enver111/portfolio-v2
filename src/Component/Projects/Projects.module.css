@@ -22,11 +22,16 @@
   row-gap: 50px;
   justify-content: space-between;
 }
+
 .card {
   padding-bottom: 28px;
   border-radius: 20px;
   box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
   background: rgb(255, 255, 255);
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card_title {

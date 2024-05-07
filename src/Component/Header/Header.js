@@ -5,6 +5,7 @@ import Moon from '../../Lib/Icon/contacts/moon.svg';
 import Sun from '../../Lib/Icon/contacts/sun.svg';
 import s from './Header.module.css';
 import Logo from '../Logo/Logo';
+import Lang from '../Lang/Lang';
 
 export default function Header({ darkTheme, toggleTheme }) {
   const items = [
@@ -45,6 +46,7 @@ export default function Header({ darkTheme, toggleTheme }) {
             )}
           </button>
         </div>
+        <Lang />
       </div>
     </header>
   );

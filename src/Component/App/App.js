@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import s from './App.module.css';
 import Main from '../Main/Main';
 import Stack from '../Stack/Stack';
+import Projects from '../Projects/Projects';
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(false);
@@ -17,6 +18,7 @@ function App() {
         <Header darkTheme={darkTheme} toggleTheme={toggleTheme} />
         <Main />
         <Stack />
+        <Projects />
       </div>
     </div>
   );

@@ -1,0 +1,46 @@
+.lang {
+  position: relative;
+}
+
+.lang button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  color: rgb(102, 102, 102);
+  font-size: 20px;
+}
+.lang button:hover {
+  background: linear-gradient(to right, rgb(19, 176, 245), rgb(66, 68, 110));
+  color: white;
+  border-radius: 50%;
+}
+
+.lang_select {
+  margin-top: 10px;
+  position: absolute;
+  border-radius: 8px;
+  box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
+  background: rgb(255, 255, 255);
+}
+.lang_select ul {
+  padding: 5px 0;
+  margin: 0 5px;
+}
+.lang_select ul > li {
+  padding: 10px;
+
+  list-style-type: none;
+  color: rgb(102, 102, 102);
+  font-size: 20px;
+  cursor: pointer;
+}
+.lang_select ul > li:hover {
+  background: linear-gradient(to right, rgb(19, 176, 245), rgb(66, 68, 110));
+  color: white;
+  border-radius: 4px;
+}

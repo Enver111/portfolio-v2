@@ -1,11 +1,11 @@
 .main {
   display: flex;
   justify-content: space-between;
-  margin: 100px 0 0 0;
+  padding: 110px 0 0 0;
 }
 .about {
   font-size: 58px;
-  color: rgb(66, 68, 110);
+  /* color: rgb(66, 68, 110); */
   font-weight: 800;
   margin: auto 0;
 }

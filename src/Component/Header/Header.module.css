@@ -1,24 +1,11 @@
 .header {
+  position: fixed;
+  width: 100%;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
-}
-.heder_btns {
-  display: flex;
-  gap: 5px;
-  padding: 5px;
-}
-.btn {
-  padding: 0 15px;
-  cursor: pointer;
-  border: none;
-  background-color: unset;
-  color: rgb(102, 102, 102);
-  font-size: 20px;
-}
-.btn:hover {
-  background: linear-gradient(to right, rgb(19, 176, 245), rgb(66, 68, 110));
-  color: white;
-  border-radius: 6px;
+  z-index: 1;
+  transition: width 0.5s;
 }
 .contscts {
   display: flex;
@@ -31,7 +18,6 @@
   filter: brightness(0);
 }
 .hover:hover img {
-  background-color: red;
   background: linear-gradient(to right, rgb(19, 176, 245), rgb(66, 68, 110));
   filter: brightness(1);
 }
@@ -42,4 +28,20 @@
   color: inherit;
   background-color: transparent;
   cursor: pointer;
+}
+.scrolled {
+  padding: 0 10px;
+  max-width: 1180px;
+  box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
+  background: rgb(255, 255, 255);
+  border-radius: 0 0 10px 10px;
+  transition: background-color 0.8s;
+  transition: width 0.5s;
+}
+.scrolledDarck {
+  background-color: #191919;
+  box-shadow: 2px 2px 100px 0px rgba(140, 140, 140, 0.2);
+}
+.darkIcon img {
+  filter: brightness(1);
 }

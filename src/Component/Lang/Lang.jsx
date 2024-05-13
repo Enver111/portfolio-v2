@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import s from './Lang.module.css';
 
-export default function Lang() {
+export default function Lang({ darkTheme }) {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLang, setSelectedLang] = useState('Ru');
@@ -16,11 +16,12 @@ export default function Lang() {
     i18n.changeLanguage(lang);
   };
 
+  const langDark = darkTheme ? s.langDark : '';
   return (
-    <div className={s.lang}>
+    <div className={`${s.lang} ${langDark}`}>
       <button onClick={toggleOpen}>{selectedLang}</button>
       {isOpen && (
-        <div className={s.lang_select}>
+        <div className={`${s.lang_select} ${langDark}`}>
           <ul>
             {langs.map(
               (lang, index) =>

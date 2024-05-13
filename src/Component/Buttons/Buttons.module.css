@@ -1,0 +1,21 @@
+.heder_btns {
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+}
+.btn {
+  padding: 0 15px;
+  cursor: pointer;
+  border: none;
+  background-color: unset;
+  color: #666666;
+  font-size: 20px;
+}
+.btn:hover {
+  background: linear-gradient(to right, rgb(19, 176, 245), rgb(66, 68, 110));
+  color: white;
+  border-radius: 6px;
+}
+.darkBtns {
+  color: white;
+}

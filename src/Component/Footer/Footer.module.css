@@ -1,0 +1,67 @@
+.linearGradient {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.footer_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.footer_contacts {
+  display: flex;
+  gap: 20px;
+}
+.footer_contacts a {
+  margin: auto 0;
+  color: rgb(66, 68, 110);
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+}
+.line {
+  border: 2px solid rgb(102, 102, 102);
+  opacity: 0.3;
+  width: 100%;
+  margin: 50px 0;
+}
+.footer_foot {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+.creators span,
+.creators {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(102, 102, 102);
+}
+
+.creators span:nth-child(1) {
+  background: linear-gradient(to right, rgb(19, 79, 245), rgb(105, 36, 202));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.creators span:nth-child(2) {
+  background: linear-gradient(to right, rgb(105, 36, 202), rgb(180, 36, 202));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.creators span:nth-child(3) {
+  background: linear-gradient(to right, rgb(180, 36, 202), rgb(194, 36, 202));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.creators span:nth-child(4) {
+  background: linear-gradient(to right, rgb(180, 36, 202), rgb(231, 15, 170));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}

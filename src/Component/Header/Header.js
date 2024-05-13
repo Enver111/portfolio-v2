@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import Github from '../../Lib/Icon/contacts/github.svg';
-import Twitter from '../../Lib/Icon/contacts/twitter.svg';
 import Moon from '../../Lib/Icon/contacts/moon.svg';
 import Sun from '../../Lib/Icon/contacts/sun.svg';
 import Logo from '../Logo/Logo';
 import Lang from '../Lang/Lang';
 import s from './Header.module.css';
+import Contacts from '../Contacts/Contacts';
+import Buttons from '../Buttons/Buttons';
 
 export default function Header({ darkTheme, toggleTheme }) {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [currentLang, setCurrentLang] = useState(i18n.language);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
     const handleLanguageChange = (lng) => {
@@ -21,35 +22,33 @@ export default function Header({ darkTheme, toggleTheme }) {
       i18n.off('languageChanged', handleLanguageChange);
     };
   }, [i18n]);
-  const items = [
-    { id: 1, name: t('Home') },
-    { id: 2, name: t('About') },
-    { id: 3, name: t('Tech Stack') },
-    { id: 4, name: t('Projects') },
-    { id: 5, name: t('Contact') },
-  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrolled = scrollPosition > 50 ? s.scrolled : '';
+  const scrolledDarck = scrollPosition > 50 ? s.scrolledDarck : '';
+
   return (
-    <header className={darkTheme ? `${s.header} ${s.dark}` : s.header}>
+    <header
+      className={`${
+        darkTheme && scrolledDarck
+          ? `${s.header} ${s.dark} ${s.scrolledDarck}`
+          : s.header
+      } ${scrolled}`}
+    >
       <Logo />
-      <div className={s.heder_btns}>
-        {items.map((item) => (
-          <button className={s.btn} key={item.id}>
-            {item.name}
-          </button>
-        ))}
-      </div>
+      <Buttons darkTheme={darkTheme} />
       <div className={s.contscts}>
-        <div className={s.hover}>
-          <a href='#github'>
-            <img src={Github} alt='github' />
-          </a>
-        </div>
-        <div className={s.hover}>
-          <a href='#twitter'>
-            <img src={Twitter} alt='twitter' />
-          </a>
-        </div>
-        <div className={s.hover}>
+        <Contacts darkTheme={darkTheme} />
+        <div className={`${s.hover} ${darkTheme ? s.darkIcon : ''}`}>
           <button onClick={toggleTheme} className={s.theme}>
             {darkTheme ? (
               <img src={Sun} alt='Sun' />
@@ -58,7 +57,7 @@ export default function Header({ darkTheme, toggleTheme }) {
             )}
           </button>
         </div>
-        <Lang />
+        <Lang darkTheme={darkTheme} />
       </div>
     </header>
   );

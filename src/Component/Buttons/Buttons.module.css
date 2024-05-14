@@ -9,7 +9,6 @@
   cursor: pointer;
   border: none;
   background-color: unset;
-  color: #666666;
   font-size: 20px;
   overflow: hidden;
 }
@@ -22,19 +21,26 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(to right, rgb(19, 176, 245), rgb(66, 68, 110));
-  transform: scaleX(0);
+  transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.2s ease-in-out;
   z-index: -1;
   border-radius: 6px;
 }
 
-.btn:hover {
+.btn a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn:hover a {
   color: white;
 }
+
 .btn:hover:before {
   transform: scaleX(1);
 }
-.darkBtns {
+
+.darkBtns a {
   color: white;
 }

@@ -1,0 +1,67 @@
+.aboutMe {
+  background: no-repeat top right/60% url(../../Lib/Icon/aboutMe/mac.png);
+  padding: 150px 0 100px 0;
+}
+
+.aboutMe_wrap h1,
+.worckExp h1 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+.aboutMe_wrap p {
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+.workCard {
+  max-width: 800px;
+  border-bottom: 2px solid rgb(235, 234, 237);
+  margin-bottom: 30px;
+}
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.cardHead h2 {
+  font-size: 23px;
+  font-weight: 400;
+  margin: auto 0;
+}
+.cardHead p {
+  margin: auto 0;
+  padding: 5px 21px;
+  border-radius: 100px;
+  background: rgb(215, 255, 224);
+  color: rgb(1, 140, 15);
+  font-size: 15px;
+  font-weight: 600;
+}
+.cardSubheader {
+  display: flex;
+  justify-content: space-between;
+}
+.company {
+  display: flex;
+}
+.company img {
+  width: 25px;
+  margin-right: 5px;
+}
+.company img:nth-child(3) {
+  margin-left: 20px;
+}
+.company p {
+  font-size: 18px;
+  margin: auto 0;
+}
+.period {
+  display: flex;
+}
+.period img {
+  width: 25px;
+  margin-right: 5px;
+}

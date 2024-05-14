@@ -38,6 +38,35 @@ i18n
             'Технологии, с которыми я работал в последнее время',
           'Things I’ve built so far':
             'Веб-сайты, которые я создал на данный момент',
+
+          'Since August 2023, I have been actively studying frontend web development, having mastered basics of HTML, CSS, SCSS, SASS, JavaScript and TypeScript. Deep I immersed myself in the React library and know how to work effectively with Redux to manage application state. I actively use the system Git version control for easy collaborative development. Ready to new challenges and constantly strive for professional growth.':
+            'C августа 2023 года активно изучаю frontend web разработку, освоив основы HTML, CSS, SCSS, SASS, JavaScript и TypeScript. Глубоко погрузился в библиотеку React и умею эффективно работать с Redux для управления состоянием приложения. Активно использую систему контроля версий Git для удобного совместного разработки. Готов к новым вызовам и постоянно стремлюсь к профессиональному росту. ',
+
+          'Personal qualities': 'Личностные качества',
+
+          'Creative thinking and abilities approach problems in a non-standard way. Perseverance, attentiveness to Details and scrupulousness in work. Analytic mind, ability to think logically and abstractly. Flexibility and speed adaptation to various changes. ':
+            'Творческое мышление и способность подходить к задачам нестандартно. Усидчивость, внимательность к деталям и скрупулезность в работе. Аналитический склад ума,способность мыслить логически и абстрактно. Гибкость и быстрая адаптация к различным изменениям.',
+
+          'I like working on interesting and complex projects. Eat great desire and determination to develop in Frontend development.':
+            'Нравится работать над интересными и сложными проектами. Есть большое желание и целеустремленность развиваться в Frontend разработке. ',
+
+          'Work Experience': 'Опыт работы',
+          'Leading specialist': 'Ведущий специалист',
+          'Full time': 'Полная занятость ',
+          'MTU Rosimushchestvo in Republic of Crimea':
+            'МТУ Росимущества в Республике Крым',
+          Simferopol: 'Симферополь',
+          'Aug 2019 - June 2020': 'Авг 2019 - Июн 2020',
+          'Aug 2020 - Nov 2023': 'Авг 2020 - Ноя 2023',
+          'State Inspector of Crimea':
+            'Государственный инспектор Республики Крым',
+          'Ministry of Natural Resources of Crimea': 'Минприроды Крыма',
+          Education: 'Образование',
+          'Construction engineer': 'Инженер-строитель',
+          'V.I. Vernadsky Crimean Federal University':
+            '«КФУ им. В.И. Вернадского», Симферополь ',
+          Bachelor: 'Бакалавр',
+          'Sept 2012 - May 2018': 'Сен 2012 - Май 2018',
         },
       },
     },

@@ -5,14 +5,14 @@
   composes: title-color;
   /*   color: rgb(66, 68, 110); */
   background-color: white;
-  transition: background-color 1s;
+  transition: background-color 0.5s ease-in-out;
 }
 .container {
   max-width: 1200px;
   margin: auto;
 }
 .app_dark {
-  transition: background-color 0.8s;
+  transition: background-color 0.5s ease-in-out;
   background-color: #191919;
   color: #fff;
 }

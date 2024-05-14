@@ -1,9 +1,3 @@
-.linearGradient {
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-}
 .footer_wrap {
   display: flex;
   justify-content: space-between;
@@ -12,12 +6,18 @@
   display: flex;
   gap: 20px;
 }
+
 .footer_contacts a {
   margin: auto 0;
   color: rgb(66, 68, 110);
   font-size: 18px;
   font-weight: 400;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease-in-out;
+}
+.footer_contacts a:hover {
+  border-bottom: 1px solid currentColor;
 }
 .line {
   border: 2px solid rgb(102, 102, 102);
@@ -64,4 +64,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+}
+.footer_contacts_dark a {
+  color: white;
 }

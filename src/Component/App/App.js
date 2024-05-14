@@ -22,8 +22,8 @@ function App() {
           <Header darkTheme={darkTheme} toggleTheme={toggleTheme} />
           <Main />
           <Stack />
-          <Projects />
-          <Footer />
+          <Projects darkTheme={darkTheme} />
+          <Footer darkTheme={darkTheme} />
         </I18nextProvider>
       </div>
     </div>

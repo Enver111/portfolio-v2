@@ -4,17 +4,36 @@
   padding: 5px;
 }
 .btn {
+  position: relative;
   padding: 0 15px;
   cursor: pointer;
   border: none;
   background-color: unset;
   color: #666666;
   font-size: 20px;
+  overflow: hidden;
 }
-.btn:hover {
+
+.btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(to right, rgb(19, 176, 245), rgb(66, 68, 110));
-  color: white;
+  transform: scaleX(0);
+  transform-origin: top;
+  transition: transform 0.2s ease-in-out;
+  z-index: -1;
   border-radius: 6px;
+}
+
+.btn:hover {
+  color: white;
+}
+.btn:hover:before {
+  transform: scaleX(1);
 }
 .darkBtns {
   color: white;

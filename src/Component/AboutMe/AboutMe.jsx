@@ -1,3 +1,7 @@
+import Company from '../../Lib/Icon/aboutMe/company.svg';
+import Location from '../../Lib/Icon/aboutMe/location.svg';
+import Period from '../../Lib/Icon/aboutMe/period.svg';
+
 import s from './AboutMe.module.css';
 
 export default function AboutMe() {
@@ -25,13 +29,13 @@ export default function AboutMe() {
             </div>
             <div className={s.cardSubheader}>
               <div className={s.company}>
-                <img src='' alt='' />
+                <img src={Company} alt='company' />
                 <p>{item.organization}</p>
-                <img src='' alt='' />
+                <img src={Location} alt='location' />
                 <p>{item.location}</p>
               </div>
               <div className={s.poriod}>
-                <img src='' alt='' />
+                <img src={Period} alt='period' />
                 <p>{item.workPeriod}</p>
               </div>
             </div>

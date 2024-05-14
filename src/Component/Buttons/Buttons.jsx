@@ -1,15 +1,16 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 import s from './Buttons.module.css';
 
 export default function Buttons({ darkTheme }) {
   const { t } = useTranslation();
   const items = [
-    { id: 1, name: t('Home') },
-    { id: 2, name: t('About') },
-    { id: 3, name: t('Tech Stack') },
-    { id: 4, name: t('Projects') },
-    { id: 5, name: t('Contacts') },
+    { id: 1, name: t('Home'), path: '/' }, // Добавьте путь для каждого элемента
+    { id: 2, name: t('About'), path: '/about' },
+    { id: 3, name: t('Tech Stack'), path: '/tech-stack' },
+    { id: 4, name: t('Projects'), path: '/projects' },
+    { id: 5, name: t('Contacts'), path: '/contacts' },
   ];
   return (
     <div className={s.heder_btns}>
@@ -18,7 +19,7 @@ export default function Buttons({ darkTheme }) {
           className={`${s.btn} ${darkTheme ? s.darkBtns : ''}`}
           key={item.id}
         >
-          {item.name}
+          <Link to={item.path}>{item.name}</Link>{' '}
         </button>
       ))}
     </div>

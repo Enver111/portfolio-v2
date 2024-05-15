@@ -20,6 +20,34 @@ i18n
           'Technologies I’ve been working with recently':
             'Technologies I’ve been working with recently',
           'Things I’ve built so far': 'Things I’ve built so far',
+          'Since August 2023, I have been actively studying frontend web development, having mastered basics of HTML, CSS, SCSS, SASS, JavaScript and TypeScript. Deep I immersed myself in the React library and know how to work effectively with Redux to manage application state. I actively use the system Git version control for easy collaborative development. Ready to new challenges and constantly strive for professional growth.':
+            'Since August 2023, I have been actively studying frontend web development, having mastered basics of HTML, CSS, SCSS, SASS, JavaScript and TypeScript. Deep I immersed myself in the React library and know how to work effectively with Redux to manage application state. I actively use the system Git version control for easy collaborative development. Ready to new challenges and constantly strive for professional growth.',
+
+          'Personal qualities': 'Personal qualities',
+
+          'Creative thinking and abilities approach problems in a non-standard way. Perseverance, attentiveness to Details and scrupulousness in work. Analytic mind, ability to think logically and abstractly. Flexibility and speed adaptation to various changes. ':
+            'Creative thinking and abilities approach problems in a non-standard way. Perseverance, attentiveness to Details and scrupulousness in work. Analytic mind, ability to think logically and abstractly. Flexibility and speed adaptation to various changes.',
+
+          'I like working on interesting and complex projects. Eat great desire and determination to develop in Frontend development.':
+            'I like working on interesting and complex projects. Eat great desire and determination to develop in Frontend development.',
+
+          'Work Experience': 'Work Experience',
+          'Leading specialist': 'Leading specialist',
+          'Full time': 'Full time',
+          'MTU Rosimushchestvo in Republic of Crimea':
+            'MTU Rosimushchestvo in Republic of Crimea',
+          Simferopol: 'Simferopol',
+          'Aug 2019 - June 2020': 'Aug 2019 - June 2020',
+          'Aug 2020 - Nov 2023': 'Aug 2020 - Nov 2023',
+          'State Inspector of Crimea': 'State Inspector of Crimea',
+          'Ministry of Natural Resources of Crimea':
+            'Ministry of Natural Resources of Crimea',
+          Education: 'Education',
+          'Construction engineer': 'Construction engineer',
+          'V.I. Vernadsky Crimean Federal University':
+            'V.I. Vernadsky Crimean Federal University',
+          Bachelor: 'Bachelor',
+          'Sept 2012 - May 2018': 'Sept 2012 - May 2018',
         },
       },
       Ru: {

@@ -1,0 +1,18 @@
+.scroll {
+  position: absolute;
+}
+.icon {
+  position: fixed;
+  right: 50px;
+  top: 93vh;
+  width: 50px;
+  height: 50px;
+  background: rgb(197, 197, 197);
+  padding: 8px 10px 12px 10px;
+  box-sizing: border-box;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.icon:hover {
+  background: rgb(105, 105, 105);
+}

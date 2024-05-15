@@ -5,6 +5,7 @@
   composes: title-color;
   /*   color: rgb(66, 68, 110); */
   background-color: white;
+  height: 100%;
   transition: background-color 0.5s ease-in-out;
 }
 .container {
@@ -12,7 +13,8 @@
   margin: auto;
 }
 .app_dark {
-  transition: background-color 0.5s ease-in-out;
   background-color: #191919;
+  height: 100%;
   color: #fff;
+  transition: background-color 0.5s ease-in-out;
 }

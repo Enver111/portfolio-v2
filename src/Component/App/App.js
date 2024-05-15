@@ -9,6 +9,8 @@ import { I18nextProvider } from 'react-i18next';
 import i18n from '../../Lib/lang/i18n';
 import Footer from '../Footer/Footer';
 import AboutMe from '../AboutMe/AboutMe';
+import Contact from '../Contact/Contact';
+import Scroll from '../Scroll/Scroll';
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(false);
@@ -33,9 +35,13 @@ function App() {
         <div className={s.container}>
           <I18nextProvider i18n={i18n}>
             <Header darkTheme={darkTheme} toggleTheme={toggleTheme} />
+            <Scroll />
             <Routes>
               <Route path='/about' element={<AboutMe />} />
               <Route path='/' element={<HomePage />} />
+              <Route path='/tech-stack' element={<Stack />} />
+              <Route path='/projects' element={<Projects />} />
+              <Route path='/contacts' element={<Contact />} />
             </Routes>
           </I18nextProvider>
         </div>

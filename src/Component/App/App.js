@@ -28,7 +28,6 @@ function App() {
       </>
     );
   }
-
   return (
     <Router>
       <div id='section1' className={darkTheme ? s.app_dark : s.app}>
@@ -41,7 +40,10 @@ function App() {
               <Route path='/' element={<HomePage />} />
               <Route path='/tech-stack' element={<Stack />} />
               <Route path='/projects' element={<Projects />} />
-              <Route path='/contacts' element={<Contact />} />
+              <Route
+                path='/contacts'
+                element={<Contact darkTheme={darkTheme} />}
+              />
             </Routes>
           </I18nextProvider>
         </div>

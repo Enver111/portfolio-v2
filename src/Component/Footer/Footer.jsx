@@ -1,9 +1,11 @@
+import { useTranslation } from 'react-i18next';
 import Buttons from '../Buttons/Buttons';
 import Contacts from '../Contacts/Contacts';
 import Logo from '../Logo/Logo';
 import s from './Footer.module.css';
 
 export default function Footer({ darkTheme }) {
+  const { t } = useTranslation();
   return (
     <div className={s.footer}>
       <div className={s.footer_wrap}>
@@ -24,8 +26,9 @@ export default function Footer({ darkTheme }) {
       <div className={s.footer_foot}>
         <Buttons darkTheme={darkTheme} />
         <p className={s.creators}>
-          Designed by <span>Pavan MG</span> built by <span>Enver EO</span> with{' '}
-          <span>Love</span> & <span>Coffee</span>
+          {t('Designed by')} <span>{t('Pavan MG')}</span> {t('built by')}{' '}
+          <span>{t('Enver EO')}</span> {t('with')} <span>{t('Love')}</span> &{' '}
+          <span>{t('Coffee')}</span>
         </p>
       </div>
     </div>

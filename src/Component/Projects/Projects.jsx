@@ -1,63 +1,70 @@
-import Bg from '../../Lib/Icon/proj/bg.svg';
+import { useTranslation } from 'react-i18next';
+import MainIcon from '../../Lib/Img/proj/job_yan.png';
+import DropIcon from '../../Lib/Img/proj/dropIcon.png';
+import MarvelIcon from '../../Lib/Img/proj/marvelIcon.png';
+import PulseIcon from '../../Lib/Img/proj/pulse.png';
+import UberIcon from '../../Lib/Img/proj/uber.png';
+import DodoIcon from '../../Lib/Img/proj/dodoIcon.png';
 import Live from '../../Lib/Icon/proj/live.svg';
 import Git from '../../Lib/Icon/proj/git.svg';
 import s from './Projects.module.css';
 
 export default function Projects({ darkTheme }) {
+  const { t } = useTranslation();
   const items = [
     {
       id: 1,
-      icon: Bg,
+      icon: MainIcon,
       alt: 'proj',
-      title: 'Project Tile goes here',
-      stack: 'HTML , JavaScript, SASS, React',
-      livePrev: '#live',
-      git: '#live',
+      title: t('Test task'),
+      stack: 'HTML , JavaScript, CSS',
+      livePrev: 'https://enver111.github.io/web/ ',
+      git: 'https://github.com/Enver111/web.git',
     },
     {
       id: 2,
-      icon: Bg,
+      icon: DropIcon,
       alt: 'proj',
-      title: 'Project Tile goes here',
-      stack: 'HTML , JavaScript, SASS, React',
-      livePrev: '#live',
-      git: '#live',
+      title: t('Test task'),
+      stack: 'HTML, React, TypeScript, CSS',
+      livePrev: 'https://enver111.github.io/dropdown_live/',
+      git: 'https://github.com/Enver111/dropdown',
     },
     {
       id: 3,
-      icon: Bg,
+      icon: MarvelIcon,
       alt: 'proj',
-      title: 'Project Tile goes here',
-      stack: 'HTML , JavaScript, SASS, React',
-      livePrev: '#live',
-      git: '#live',
+      title: t('Mentors technical task'),
+      stack: 'HTML, React , JavaScript, SCSS',
+      livePrev: 'https://enver111.github.io/marvel_live/',
+      git: 'https://github.com/Enver111/marver1',
     },
     {
       id: 4,
-      icon: Bg,
+      icon: DodoIcon,
       alt: 'proj',
-      title: 'Project Tile goes here',
-      stack: 'HTML , JavaScript, SASS, React',
-      livePrev: '#live',
-      git: '#live',
+      title: t('Mentors technical task'),
+      stack: 'HTML, React, JavaScript, CSS, ',
+      livePrev: 'https://enver111.github.io/dodo_pizza_live/',
+      git: 'https://github.com/Enver111/dodo_pizza',
     },
     {
       id: 5,
-      icon: Bg,
+      icon: PulseIcon,
       alt: 'proj',
-      title: 'Project Tile goes here',
-      stack: 'HTML , JavaScript, SASS, React',
-      livePrev: '#live',
-      git: '#live',
+      title: t('Mentors technical task'),
+      stack: 'HTML , JavaScript, SASS',
+      livePrev: 'https://enver111.github.io/pulse/',
+      git: 'https://github.com/Enver111/pulse',
     },
     {
       id: 6,
-      icon: Bg,
+      icon: UberIcon,
       alt: 'proj',
-      title: 'Project Tile goes here',
-      stack: 'HTML , JavaScript, SASS, React',
-      livePrev: '#live',
-      git: '#live',
+      title: t('Mentors technical task'),
+      stack: 'HTML , JavaScript, SASS',
+      livePrev: 'https://enver111.github.io/uber/',
+      git: 'https://github.com/Enver111/uber',
     },
   ];
 
@@ -74,18 +81,20 @@ export default function Projects({ darkTheme }) {
             className={`${s.card} ${darkTheme ? s.darkCards : ''}`}
           >
             <img src={item.icon} alt={item.alt} />
+
             <h1 className={s.card_title}>{item.title}</h1>
             <div className={s.stack}>
-              Tech stack : <span>{item.stack}</span>
+              {t('Tech stack :')}
+              <span>{item.stack}</span>
             </div>
             <div className={s.footer}>
               <div className={`${s.live} ${darkTheme ? s.darkIcon : ''}`}>
                 <img src={Live} alt='live' />
-                <a href='#live'>Live Preview</a>
+                <a href={item.livePrev}>{t('Open Project')}</a>
               </div>
               <div className={`${s.code} ${darkTheme ? s.darkIcon : ''}`}>
                 <img src={Git} alt='git' />
-                <a href='#live'>View Code</a>
+                <a href={item.git}>{t('Open Code')}</a>
               </div>
             </div>
           </div>

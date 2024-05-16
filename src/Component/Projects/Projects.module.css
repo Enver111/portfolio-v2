@@ -22,6 +22,10 @@
   row-gap: 50px;
   justify-content: space-between;
 }
+.card img {
+  width: 375px;
+  border-radius: 20px 20px 0 0;
+}
 
 .card {
   box-sizing: border-box;
@@ -37,8 +41,9 @@
 }
 
 .card_title {
-  margin: 27px 0 17px 28px;
-  font-size: 28px;
+  max-width: 319px;
+  margin: 27px 28px 17px 28px;
+  font-size: 20px;
   font-weight: 500;
 }
 .stack {
@@ -56,7 +61,6 @@
   margin: 0 28px;
   display: flex;
   justify-content: space-between;
-  gap: 50px;
 }
 .live,
 .code {
@@ -66,7 +70,6 @@
 .code img {
   box-sizing: border-box;
   width: 20px;
-  height: 20px;
   margin: auto 12px auto 0;
   filter: brightness(0);
 }

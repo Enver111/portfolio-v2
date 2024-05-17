@@ -21,8 +21,8 @@ function App() {
   function HomePage() {
     return (
       <>
-        <Main />
-        <Stack />
+        <Main darkTheme={darkTheme} />
+        <Stack darkTheme={darkTheme} />
         <Projects darkTheme={darkTheme} />
         <Footer darkTheme={darkTheme} />
       </>
@@ -36,10 +36,19 @@ function App() {
             <Header darkTheme={darkTheme} toggleTheme={toggleTheme} />
             <Scroll />
             <Routes>
-              <Route path='/about' element={<AboutMe />} />
-              <Route path='/' element={<HomePage />} />
-              <Route path='/tech-stack' element={<Stack />} />
-              <Route path='/projects' element={<Projects />} />
+              <Route
+                path='/about'
+                element={<AboutMe darkTheme={darkTheme} />}
+              />
+              <Route path='/' element={<HomePage darkTheme={darkTheme} />} />
+              <Route
+                path='/tech-stack'
+                element={<Stack darkTheme={darkTheme} />}
+              />
+              <Route
+                path='/projects'
+                element={<Projects darkTheme={darkTheme} />}
+              />
               <Route
                 path='/contacts'
                 element={<Contact darkTheme={darkTheme} />}

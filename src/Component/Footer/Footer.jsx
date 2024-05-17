@@ -15,20 +15,25 @@ export default function Footer({ darkTheme }) {
             darkTheme ? s.footer_contacts_dark : ''
           }`}
         >
-          <a href='tel:+79780200852'>+7 (978) 020-08-52</a>
-          <a href='mailto:enver.erfanovich@gmail.com'>
+          <a className={s.footer_link} href='tel:+79780200852'>
+            +7 (978) 020-08-52
+          </a>
+          <a className={s.footer_link} href='mailto:enver.erfanovich@gmail.com'>
             enver.erfanovich@gmail.com
           </a>
           <Contacts darkTheme={darkTheme} />
         </div>
       </div>
-      <div className={s.line}></div>
+      <div className={`${s.line} ${darkTheme ? s.darkLine : ''}`}></div>
       <div className={s.footer_foot}>
         <Buttons darkTheme={darkTheme} />
         <p className={s.creators}>
-          {t('Designed by')} <span>{t('Pavan MG')}</span> {t('built by')}{' '}
-          <span>{t('Enver EO')}</span> {t('with')} <span>{t('Love')}</span> &{' '}
-          <span>{t('Coffee')}</span>
+          {t('Designed by')}{' '}
+          <span className={s.cretors_name}>{t('Pavan MG')}</span>{' '}
+          {t('built by')}{' '}
+          <span className={s.cretors_name}>{t('Enver EO')}</span> {t('with')}{' '}
+          <span className={s.cretors_name}>{t('Love')}</span> &{' '}
+          <span className={s.cretors_name}>{t('Coffee')}</span>
         </p>
       </div>
     </div>

@@ -2,6 +2,7 @@
   display: flex;
   gap: 5px;
   padding: 5px;
+  z-index: 2;
 }
 .btn {
   position: relative;
@@ -11,6 +12,7 @@
   background-color: unset;
   font-size: 20px;
   overflow: hidden;
+  z-index: 2;
 }
 
 .btn:before {
@@ -22,7 +24,7 @@
   height: 100%;
   background: linear-gradient(to right, rgb(19, 176, 245), rgb(66, 68, 110));
   transform: scaleY(0);
-  transform-origin: top;
+  transform-origin: left;
   transition: transform 0.2s ease-in-out;
   z-index: -1;
   border-radius: 6px;

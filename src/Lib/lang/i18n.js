@@ -60,6 +60,8 @@ i18n
           'Tech stack :': 'Tech stack : ',
           'Open Project': 'Open Project',
           'Open Code': 'Open Code',
+          'For any questions please write to me:':
+            'For any questions please write to me: ',
         },
       },
       Ru: {
@@ -121,6 +123,8 @@ i18n
           'Tech stack :': 'Технический стек : ',
           'Open Project': 'Открыть проект',
           'Open Code': 'Открыть код',
+          'For any questions please write to me:':
+            'По всем вопросам пишите мне:',
         },
       },
     },

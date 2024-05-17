@@ -7,12 +7,12 @@ export default function Contacts({ darkTheme }) {
   return (
     <div className={s.contscts}>
       <div className={`${s.hover} ${darkIcon}`}>
-        <a href='#github'>
+        <a href='https://github.com/Enver111'>
           <img src={Github} alt='github' />
         </a>
       </div>
       <div className={`${s.hover} ${darkIcon}`}>
-        <a href='#telegram'>
+        <a href='https://t.me/osmanovenver'>
           <img src={Telegram} alt='telegram' />
         </a>
       </div>

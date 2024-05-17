@@ -1,11 +1,10 @@
 .stack {
-  padding-top: 100px;
+  padding-top: 150px;
 }
 .title {
   text-align: center;
   font-size: 48px;
   font-weight: 800;
-  /* color: rgb(66, 68, 110); */
   margin: 0 0 40px 0;
 }
 .subtitle {
@@ -13,11 +12,23 @@
   text-align: center;
   font-size: 32px;
   font-weight: 400;
-  /*  color: rgb(102, 102, 102); */
 }
 .stack_icons {
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 71px 100px;
+  justify-content: center;
+  gap: 70px 100px;
+}
+.stack_icons img:nth-child(13),
+.stack_icons img:nth-child(11) {
+  filter: brightness(0);
+}
+
+.stack_icons img:nth-child(14) {
+  width: 120px;
+}
+.darckIcon img:nth-child(13),
+.darckIcon img:nth-child(11) {
+  filter: brightness(1);
 }

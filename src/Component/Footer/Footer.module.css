@@ -7,7 +7,7 @@
   gap: 20px;
 }
 
-.footer_contacts a {
+.footer_link {
   margin: auto 0;
   color: rgb(66, 68, 110);
   font-size: 18px;
@@ -16,7 +16,7 @@
   border-bottom: 1px solid transparent;
   transition: border-bottom 0.3s ease-in-out;
 }
-.footer_contacts a:hover {
+.footer_link:hover {
   border-bottom: 1px solid currentColor;
 }
 .line {
@@ -25,40 +25,43 @@
   width: 100%;
   margin: 50px 0;
 }
+.darkLine {
+  border: 2px solid white;
+  opacity: unset;
+}
 .footer_foot {
   display: flex;
   justify-content: space-between;
   padding-bottom: 50px;
 }
-.creators span,
+.cretors_name,
 .creators {
   font-size: 18px;
   font-weight: 400;
-  color: rgb(102, 102, 102);
 }
 
-.creators span:nth-child(1) {
+.cretors_name:nth-child(1) {
   background: linear-gradient(to right, rgb(19, 79, 245), rgb(105, 36, 202));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
-.creators span:nth-child(2) {
+.cretors_name:nth-child(2) {
   background: linear-gradient(to right, rgb(105, 36, 202), rgb(180, 36, 202));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
-.creators span:nth-child(3) {
+.cretors_name:nth-child(3) {
   background: linear-gradient(to right, rgb(180, 36, 202), rgb(194, 36, 202));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
-.creators span:nth-child(4) {
+.cretors_name:nth-child(4) {
   background: linear-gradient(to right, rgb(180, 36, 202), rgb(231, 15, 170));
   -webkit-background-clip: text;
   background-clip: text;

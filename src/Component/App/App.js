@@ -11,6 +11,7 @@ import Footer from '../Footer/Footer';
 import AboutMe from '../AboutMe/AboutMe';
 import Contact from '../Contact/Contact';
 import Scroll from '../Scroll/Scroll';
+import { useMediaQuery } from 'react-responsive';
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(false);
@@ -18,11 +19,36 @@ function App() {
   const toggleTheme = () => {
     setDarkTheme(!darkTheme);
   };
+  const mobileVersion = useMediaQuery({
+    query: ' (max-width: 767px)',
+  });
+  const tabletVersion = useMediaQuery({
+    query: '(min-width: 768px) and (max-width: 1023px)',
+  });
+  const desktopVersion = useMediaQuery({
+    query: '(min-width: 1024px) and (max-width: 1200px)',
+  });
+  const desktopVersionMax = useMediaQuery({
+    query: '(min-width: 1201px)',
+  });
+
   function HomePage() {
     return (
       <>
-        <Main darkTheme={darkTheme} />
-        <Stack darkTheme={darkTheme} />
+        <Main
+          darkTheme={darkTheme}
+          mobileVersion={mobileVersion}
+          tabletVersion={tabletVersion}
+          desktopVersion={desktopVersion}
+          desktopVersionMax={desktopVersionMax}
+        />
+        <Stack
+          darkTheme={darkTheme}
+          mobileVersion={mobileVersion}
+          tabletVersion={tabletVersion}
+          desktopVersion={desktopVersion}
+          desktopVersionMax={desktopVersionMax}
+        />
         <Projects darkTheme={darkTheme} />
         <Footer darkTheme={darkTheme} />
       </>
@@ -33,7 +59,14 @@ function App() {
       <div id='section1' className={darkTheme ? s.app_dark : s.app}>
         <div className={s.container}>
           <I18nextProvider i18n={i18n}>
-            <Header darkTheme={darkTheme} toggleTheme={toggleTheme} />
+            <Header
+              darkTheme={darkTheme}
+              toggleTheme={toggleTheme}
+              mobileVersion={mobileVersion}
+              tabletVersion={tabletVersion}
+              desktopVersion={desktopVersion}
+              desktopVersionMax={desktopVersionMax}
+            />
             <Scroll />
             <Routes>
               <Route
@@ -43,7 +76,15 @@ function App() {
               <Route path='/' element={<HomePage darkTheme={darkTheme} />} />
               <Route
                 path='/tech-stack'
-                element={<Stack darkTheme={darkTheme} />}
+                element={
+                  <Stack
+                    darkTheme={darkTheme}
+                    mobileVersion={mobileVersion}
+                    tabletVersion={tabletVersion}
+                    desktopVersion={desktopVersion}
+                    desktopVersionMax={desktopVersionMax}
+                  />
+                }
               />
               <Route
                 path='/projects'

@@ -20,12 +20,36 @@
 .mainPhoto {
   background: linear-gradient(to bottom, rgb(202, 36, 180), rgb(19, 176, 245));
   border-radius: 50%;
+  width: 370px;
   height: 370px;
   transition: transform 0.5s;
 }
-.mainPhoto img {
+.mainPhoto_icon {
   margin: 10px;
   width: 350px;
   height: 350px;
   border-radius: 50%;
+}
+.main_desctop {
+  padding: 110px 20px 0 20px;
+}
+
+.about_tablet {
+  font-size: 48px;
+}
+.mainPhoto_tablet {
+  width: 300px;
+  height: 300px;
+}
+.mainPhoto_icon_tablet {
+  width: 280px;
+  height: 280px;
+}
+.main_mobile {
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 20px;
+}
+.about_mobile {
+  text-align: center;
 }

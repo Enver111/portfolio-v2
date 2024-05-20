@@ -49,8 +49,20 @@ function App() {
           desktopVersion={desktopVersion}
           desktopVersionMax={desktopVersionMax}
         />
-        <Projects darkTheme={darkTheme} />
-        <Footer darkTheme={darkTheme} />
+        <Projects
+          darkTheme={darkTheme}
+          mobileVersion={mobileVersion}
+          tabletVersion={tabletVersion}
+          desktopVersion={desktopVersion}
+          desktopVersionMax={desktopVersionMax}
+        />
+        <Footer
+          darkTheme={darkTheme}
+          mobileVersion={mobileVersion}
+          tabletVersion={tabletVersion}
+          desktopVersion={desktopVersion}
+          desktopVersionMax={desktopVersionMax}
+        />
       </>
     );
   }
@@ -71,9 +83,28 @@ function App() {
             <Routes>
               <Route
                 path='/about'
-                element={<AboutMe darkTheme={darkTheme} />}
+                element={
+                  <AboutMe
+                    darkTheme={darkTheme}
+                    mobileVersion={mobileVersion}
+                    tabletVersion={tabletVersion}
+                    desktopVersion={desktopVersion}
+                    desktopVersionMax={desktopVersionMax}
+                  />
+                }
               />
-              <Route path='/' element={<HomePage darkTheme={darkTheme} />} />
+              <Route
+                path='/'
+                element={
+                  <HomePage
+                    darkTheme={darkTheme}
+                    mobileVersion={mobileVersion}
+                    tabletVersion={tabletVersion}
+                    desktopVersion={desktopVersion}
+                    desktopVersionMax={desktopVersionMax}
+                  />
+                }
+              />
               <Route
                 path='/tech-stack'
                 element={
@@ -88,11 +119,27 @@ function App() {
               />
               <Route
                 path='/projects'
-                element={<Projects darkTheme={darkTheme} />}
+                element={
+                  <Projects
+                    darkTheme={darkTheme}
+                    mobileVersion={mobileVersion}
+                    tabletVersion={tabletVersion}
+                    desktopVersion={desktopVersion}
+                    desktopVersionMax={desktopVersionMax}
+                  />
+                }
               />
               <Route
                 path='/contacts'
-                element={<Contact darkTheme={darkTheme} />}
+                element={
+                  <Contact
+                    darkTheme={darkTheme}
+                    mobileVersion={mobileVersion}
+                    tabletVersion={tabletVersion}
+                    desktopVersion={desktopVersion}
+                    desktopVersionMax={desktopVersionMax}
+                  />
+                }
               />
             </Routes>
           </I18nextProvider>

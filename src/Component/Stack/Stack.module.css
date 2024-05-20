@@ -20,15 +20,27 @@
   justify-content: center;
   gap: 70px 100px;
 }
-.stack_icons img:nth-child(13),
-.stack_icons img:nth-child(11) {
+.icons:nth-child(13),
+.icons:nth-child(11) {
   filter: brightness(0);
 }
 
-.stack_icons img:nth-child(14) {
+.icons:nth-child(14) {
   width: 120px;
 }
 .darckIcon img:nth-child(13),
 .darckIcon img:nth-child(11) {
   filter: brightness(1);
+}
+.stack_desktop {
+  padding: 150px 20px 0 20px;
+}
+.stack_tablet {
+  padding: 150px 25px 0 25px;
+}
+.subtitle_tablet {
+  font-size: 28px;
+}
+.stack_icons_tablet {
+  gap: 50px 50px;
 }

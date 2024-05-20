@@ -100,8 +100,7 @@ i18n
           Simferopol: 'Симферополь',
           'Aug 2019 - June 2020': 'Авг 2019 - Июн 2020',
           'Aug 2020 - Nov 2023': 'Авг 2020 - Ноя 2023',
-          'State Inspector of Crimea':
-            'Государственный инспектор Республики Крым',
+          'State Inspector of Crimea': 'Главный специалист',
           'Ministry of Natural Resources of Crimea': 'Минприроды Крыма',
           Education: 'Образование',
           'Construction engineer': 'Инженер-строитель',

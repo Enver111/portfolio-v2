@@ -65,3 +65,46 @@
   width: 25px;
   margin-right: 5px;
 }
+
+.aboutMe_desktop {
+  padding: 150px 20px 100px 20px;
+  background-position: right top 3%;
+}
+.aboutMe_wrap_desktop p:nth-child(2) {
+  width: 480px;
+}
+.aboutMe_tablet {
+  padding: 100px 20px 100px 20px;
+  background-size: 60%;
+  background-position: right top 12%;
+}
+.aboutMe_wrap_tablet p:nth-child(2) {
+  width: 370px;
+}
+
+.aboutMe_mobile {
+  padding: 150px 20px 100px 20px;
+  background-size: 60%;
+  background-position: right top 2%;
+}
+.aboutMe_wrap_mobile h1,
+.worckExp_mobile h1 {
+  font-size: 38px;
+}
+.cardHead_mobile h2 {
+  font-size: 18px;
+}
+.cardHead_mobile p {
+  font-size: 12px;
+}
+/* .company_mobile {
+  flex-direction: column;
+} */
+
+.company_mobile p {
+  font-size: 15px;
+}
+.cardSubheader_mobile {
+  flex-direction: column;
+  justify-content: start;
+}

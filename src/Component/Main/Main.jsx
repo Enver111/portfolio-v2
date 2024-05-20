@@ -38,7 +38,7 @@ export default function Main({
       )}
       {tabletVersion && (
         <aside className={`${s.main} ${s.main_desctop}`}>
-          <div className={`${s.about} ${s.about_tabletVersion}`}>
+          <div className={`${s.about} ${s.about_tablet}`}>
             {t('Hi')} 👋, <br /> {t('My name is')} <br />{' '}
             <span>{t('Enver Osmanov')}</span>
             <br /> {t('I m a Frontend Developer')}

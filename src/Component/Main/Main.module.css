@@ -20,7 +20,6 @@
 .mainPhoto {
   background: linear-gradient(to bottom, rgb(202, 36, 180), rgb(19, 176, 245));
   border-radius: 50%;
-  width: 370px;
   height: 370px;
   transition: transform 0.5s;
 }

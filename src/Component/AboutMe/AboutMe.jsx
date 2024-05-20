@@ -5,7 +5,12 @@ import Period from '../../Lib/Icon/aboutMe/period.svg';
 import Diploma from '../../Lib/Icon/aboutMe/dipl.svg';
 import s from './AboutMe.module.css';
 
-export default function AboutMe() {
+export default function AboutMe({
+  mobileVersion,
+  tabletVersion,
+  desktopVersion,
+  desktopVersionMax,
+}) {
   const { t } = useTranslation();
   const worckExpirience = [
     {
@@ -35,9 +40,30 @@ export default function AboutMe() {
       workPeriod: t('Sept 2012 - May 2018'),
     },
   ];
+
   return (
-    <div className={s.aboutMe}>
-      <div className={s.aboutMe_wrap}>
+    <div
+      className={`${s.aboutMe} ${
+        desktopVersion
+          ? s.aboutMe_desktop
+          : '' || tabletVersion
+          ? s.aboutMe_tablet
+          : '' || mobileVersion
+          ? s.aboutMe_mobile
+          : ''
+      }`}
+    >
+      <div
+        className={`${s.aboutMe_wrap} ${
+          desktopVersion
+            ? s.aboutMe_wrap_desktop
+            : '' || tabletVersion
+            ? s.aboutMe_wrap_tablet
+            : '' || mobileVersion
+            ? s.aboutMe_wrap_mobile
+            : ''
+        }`}
+      >
         <h1>{t('About')}</h1>
         <p>
           {t(
@@ -55,16 +81,30 @@ export default function AboutMe() {
           )}
         </p>
       </div>
-      <div className={s.worckExp}>
+      <div
+        className={`${s.worckExp} ${mobileVersion ? s.worckExp_mobile : ''}`}
+      >
         <h1>{t('Work Experience')}</h1>
         {worckExpirience.map((item) => (
           <div key={item.id} className={s.workCard}>
-            <div className={s.cardHead}>
+            <div
+              className={`${s.cardHead} ${
+                mobileVersion ? s.cardHead_mobile : ''
+              }`}
+            >
               <h2>{item.position}</h2>
               <p>{item.schedule}</p>
             </div>
-            <div className={s.cardSubheader}>
-              <div className={s.company}>
+            <div
+              className={`${s.cardSubheader} ${
+                mobileVersion ? s.cardSubheader_mobile : ''
+              }`}
+            >
+              <div
+                className={`${s.company} ${
+                  mobileVersion ? s.company_mobile : ''
+                }`}
+              >
                 <img src={Company} alt='company' />
                 <p>{item.organization}</p>
                 <img src={Location} alt='location' />
@@ -78,16 +118,30 @@ export default function AboutMe() {
           </div>
         ))}
       </div>
-      <div className={s.worckExp}>
+      <div
+        className={`${s.worckExp} ${mobileVersion ? s.worckExp_mobile : ''}`}
+      >
         <h1>{t('Education')}</h1>
         {education.map((item) => (
           <div key={item.id} className={s.workCard}>
-            <div className={s.cardHead}>
+            <div
+              className={`${s.cardHead} ${
+                mobileVersion ? s.cardHead_mobile : ''
+              }`}
+            >
               <h2>{item.position}</h2>
               <p>{item.schedule}</p>
             </div>
-            <div className={s.cardSubheader}>
-              <div className={s.company}>
+            <div
+              className={`${s.cardSubheader} ${
+                mobileVersion ? s.cardSubheader_mobile : ''
+              }`}
+            >
+              <div
+                className={`${s.company} ${
+                  mobileVersion ? s.company_mobile : ''
+                }`}
+              >
                 <img src={Company} alt='company' />
                 <p>{item.organization}</p>
                 <img src={Diploma} alt='location' />

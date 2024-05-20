@@ -34,8 +34,10 @@
   justify-content: space-between;
   padding-bottom: 50px;
 }
+
 .cretors_name,
 .creators {
+  text-align: center;
   font-size: 18px;
   font-weight: 400;
 }
@@ -70,4 +72,23 @@
 }
 .footer_contacts_dark a {
   color: white;
+}
+
+.footer_desktop {
+  padding: 0 20px;
+}
+.footer_foot_desktop {
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.footer_wrap_mobile {
+  flex-direction: column-reverse;
+  gap: 10px;
+  align-items: center;
+}
+.footer_contacts_mobile {
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }

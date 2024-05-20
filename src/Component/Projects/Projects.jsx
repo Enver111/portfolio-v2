@@ -1,3 +1,4 @@
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import MainIcon from '../../Lib/Img/proj/job_yan.png';
 import DropIcon from '../../Lib/Img/proj/dropIcon.png';
@@ -5,11 +6,47 @@ import MarvelIcon from '../../Lib/Img/proj/marvelIcon.png';
 import PulseIcon from '../../Lib/Img/proj/pulse.png';
 import UberIcon from '../../Lib/Img/proj/uber.png';
 import DodoIcon from '../../Lib/Img/proj/dodoIcon.png';
-import Live from '../../Lib/Icon/proj/live.svg';
-import Git from '../../Lib/Icon/proj/git.svg';
+import Cards from './Card';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import s from './Projects.module.css';
 
-export default function Projects({ darkTheme }) {
+function CardsCarousel({ items, darkTheme, t, mobileVersion, tabletVersion }) {
+  const settings = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: mobileVersion ? 1 : 2,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    /*  centerMode: true, */
+  };
+  return (
+    <Slider {...settings}>
+      {items.map((item) => (
+        <Cards
+          tabletVersion={tabletVersion}
+          mobileVersion={mobileVersion}
+          key={item.id}
+          item={item}
+          darkTheme={darkTheme}
+          t={t}
+        />
+      ))}
+    </Slider>
+  );
+}
+
+export default function Projects({
+  darkTheme,
+  mobileVersion,
+  tabletVersion,
+  desktopVersion,
+  desktopVersionMax,
+}) {
   const { t } = useTranslation();
   const items = [
     {
@@ -17,7 +54,7 @@ export default function Projects({ darkTheme }) {
       icon: MainIcon,
       alt: 'proj',
       title: t('Test task'),
-      stack: 'HTML , JavaScript, CSS',
+      stack: 'HTML , JavaScript, CSS, SCSS',
       livePrev: 'https://enver111.github.io/web/ ',
       git: 'https://github.com/Enver111/web.git',
     },
@@ -53,7 +90,7 @@ export default function Projects({ darkTheme }) {
       icon: PulseIcon,
       alt: 'proj',
       title: t('Mentors technical task'),
-      stack: 'HTML , JavaScript, SASS',
+      stack: 'HTML , JavaScript, CSS, SASS',
       livePrev: 'https://enver111.github.io/pulse/',
       git: 'https://github.com/Enver111/pulse',
     },
@@ -62,44 +99,64 @@ export default function Projects({ darkTheme }) {
       icon: UberIcon,
       alt: 'proj',
       title: t('Mentors technical task'),
-      stack: 'HTML , JavaScript, SASS',
+      stack: 'HTML, JavaScript,CSS, SASS',
       livePrev: 'https://enver111.github.io/uber/',
       git: 'https://github.com/Enver111/uber',
     },
   ];
-
-  return (
-    <div className={s.proj}>
+  const Head = (
+    <>
       <h1 className={s.title}>Проекты</h1>
-      <h2 className={s.subtitle}>
+      <h2 className={`${s.subtitle} ${tabletVersion ? s.subtitle_tablet : ''}`}>
         Веб-сайты, которые я написал на данный момент
       </h2>
-      <div className={s.cards}>
-        {items.map((item) => (
-          <div
-            key={item.id}
-            className={`${s.card} ${darkTheme ? s.darkCards : ''}`}
-          >
-            <img src={item.icon} alt={item.alt} />
+    </>
+  );
 
-            <h1 className={s.card_title}>{item.title}</h1>
-            <div className={s.stack}>
-              {t('Tech stack :')}
-              <span>{item.stack}</span>
-            </div>
-            <div className={s.footer}>
-              <div className={`${s.live} ${darkTheme ? s.darkIcon : ''}`}>
-                <img src={Live} alt='live' />
-                <a href={item.livePrev}>{t('Open Project')}</a>
-              </div>
-              <div className={`${s.code} ${darkTheme ? s.darkIcon : ''}`}>
-                <img src={Git} alt='git' />
-                <a href={item.git}>{t('Open Code')}</a>
-              </div>
-            </div>
+  return (
+    <>
+      {desktopVersionMax && (
+        <div className={s.proj}>
+          {Head}
+          <div className={`${s.cards} ${s.cards_desctop} ${s.cards_tablet}`}>
+            {items.map((item) => (
+              <Cards key={item.id} item={item} darkTheme={darkTheme} t={t} />
+            ))}
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
+      )}
+      {desktopVersion && (
+        <div className={`${s.proj} ${s.proj_desctop}`}>
+          {Head}
+          <div className={`${s.cards} ${s.cards_desctop} ${s.cards_tablet}`}>
+            {items.map((item) => (
+              <Cards key={item.id} item={item} darkTheme={darkTheme} t={t} />
+            ))}
+          </div>
+        </div>
+      )}
+      {tabletVersion && (
+        <div className={`${s.proj} ${s.proj_desctop}`}>
+          {Head}
+          <CardsCarousel
+            items={items}
+            darkTheme={darkTheme}
+            t={t}
+            tabletVersion={tabletVersion}
+          />
+        </div>
+      )}
+      {mobileVersion && (
+        <div className={`${s.proj} ${s.proj_desctop}`}>
+          {Head}
+          <CardsCarousel
+            mobileVersion={mobileVersion}
+            items={items}
+            darkTheme={darkTheme}
+            t={t}
+          />
+        </div>
+      )}
+    </>
   );
 }

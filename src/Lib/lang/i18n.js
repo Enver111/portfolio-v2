@@ -79,7 +79,7 @@ i18n
           'Technologies I’ve been working with recently':
             'Технологии, с которыми я работал в последнее время',
           'Things I’ve built so far':
-            'Веб-сайты, которые я создал на данный момент',
+            'Вещи, которые я построил на данный момент',
 
           'Since August 2023, I have been actively studying frontend web development, having mastered basics of HTML, CSS, SCSS, SASS, JavaScript and TypeScript. Deep I immersed myself in the React library and know how to work effectively with Redux to manage application state. I actively use the system Git version control for easy collaborative development. Ready to new challenges and constantly strive for professional growth.':
             'C августа 2023 года активно изучаю frontend web разработку, освоив основы HTML, CSS, SCSS, SASS, JavaScript и TypeScript. Глубоко погрузился в библиотеку React и умею эффективно работать с Redux для управления состоянием приложения. Активно использую систему контроля версий Git для удобного совместного разработки. Готов к новым вызовам и постоянно стремлюсь к профессиональному росту. ',

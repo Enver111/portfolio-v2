@@ -86,7 +86,7 @@
 }
 .darkCards {
   background-color: #191919;
-  transition: background 0.9s;
+  transition: background 0.9s, transform 0.2s;
   box-shadow: 2px 2px 100px 0px rgba(140, 140, 140, 0.2);
 }
 .darkIcon img {

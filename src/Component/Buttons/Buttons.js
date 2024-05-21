@@ -5,11 +5,11 @@ import s from '../Header/Header.module.css';
 export default function Buttons({ darkTheme, tabletVersion, mobileVersion }) {
   const { t } = useTranslation();
   const items = [
-    { id: 1, name: t('Home'), path: '/' },
-    { id: 2, name: t('About'), path: '/about' },
-    { id: 3, name: t('Tech Stack'), path: '/tech-stack' },
-    { id: 4, name: t('Projects'), path: '/projects' },
-    { id: 5, name: t('Contacts'), path: '/contacts' },
+    { id: 1, name: t('Home'), path: '/001' },
+    { id: 2, name: t('About'), path: '/001/about' },
+    { id: 3, name: t('Tech Stack'), path: '/001/tech-stack' },
+    { id: 4, name: t('Projects'), path: '/001/projects' },
+    { id: 5, name: t('Contacts'), path: '/001/contacts' },
   ];
   return (
     <div

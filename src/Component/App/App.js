@@ -82,19 +82,7 @@ function App() {
             <Scroll />
             <Routes>
               <Route
-                path='/about'
-                element={
-                  <AboutMe
-                    darkTheme={darkTheme}
-                    mobileVersion={mobileVersion}
-                    tabletVersion={tabletVersion}
-                    desktopVersion={desktopVersion}
-                    desktopVersionMax={desktopVersionMax}
-                  />
-                }
-              />
-              <Route
-                path='/'
+                path='/001'
                 element={
                   <HomePage
                     darkTheme={darkTheme}
@@ -106,7 +94,19 @@ function App() {
                 }
               />
               <Route
-                path='/tech-stack'
+                path='/001/about'
+                element={
+                  <AboutMe
+                    darkTheme={darkTheme}
+                    mobileVersion={mobileVersion}
+                    tabletVersion={tabletVersion}
+                    desktopVersion={desktopVersion}
+                    desktopVersionMax={desktopVersionMax}
+                  />
+                }
+              />
+              <Route
+                path='/001/tech-stack'
                 element={
                   <Stack
                     darkTheme={darkTheme}
@@ -118,7 +118,7 @@ function App() {
                 }
               />
               <Route
-                path='/projects'
+                path='/001/projects'
                 element={
                   <Projects
                     darkTheme={darkTheme}
@@ -130,7 +130,7 @@ function App() {
                 }
               />
               <Route
-                path='/contacts'
+                path='/001/contacts'
                 element={
                   <Contact
                     darkTheme={darkTheme}

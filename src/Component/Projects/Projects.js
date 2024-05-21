@@ -103,9 +103,9 @@ export default function Projects({
   ];
   const Head = (
     <>
-      <h1 className={s.title}>Проекты</h1>
+      <h1 className={s.title}>{t('Projects')}</h1>
       <h2 className={`${s.subtitle} ${tabletVersion ? s.subtitle_tablet : ''}`}>
-        Веб-сайты, которые я написал на данный момент
+        {t('Things I’ve built so far')}
       </h2>
     </>
   );

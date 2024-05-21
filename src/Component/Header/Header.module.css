@@ -36,7 +36,7 @@
   box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
   background: rgb(255, 255, 255);
   border-radius: 0 0 10px 10px;
-  transition: background-color 0.8s ease-in-out, width 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out, width 0.5s ease-in-out;
 }
 .scrolledDarck {
   background-color: #191919;

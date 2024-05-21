@@ -18,7 +18,7 @@ export default function Lang({ darkTheme }) {
 
   const langDark = darkTheme ? s.langDark : '';
   return (
-    <div className={`${s.lang} ${langDark}`}>
+    <div className={`${s.lang} ${darkTheme ? s.langDark_main : ''}`}>
       <button onClick={toggleOpen}>{selectedLang}</button>
       {isOpen && (
         <div className={`${s.lang_select} ${langDark}`}>

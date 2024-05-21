@@ -10,7 +10,6 @@ import Cards from './Card';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
 import s from './Projects.module.css';
 
 function CardsCarousel({ items, darkTheme, t, mobileVersion, tabletVersion }) {
@@ -22,7 +21,6 @@ function CardsCarousel({ items, darkTheme, t, mobileVersion, tabletVersion }) {
     slidesToShow: mobileVersion ? 1 : 2,
     slidesToScroll: 1,
     swipeToSlide: true,
-    /*  centerMode: true, */
   };
   return (
     <Slider {...settings}>
@@ -39,7 +37,6 @@ function CardsCarousel({ items, darkTheme, t, mobileVersion, tabletVersion }) {
     </Slider>
   );
 }
-
 export default function Projects({
   darkTheme,
   mobileVersion,
@@ -112,7 +109,6 @@ export default function Projects({
       </h2>
     </>
   );
-
   return (
     <>
       {desktopVersionMax && (

@@ -24,7 +24,7 @@ export default function Cards({
       />
 
       <h1 className={s.card_title}>{item.title}</h1>
-      <div className={s.stack}>
+      <div className={`${s.stack} ${darkTheme ? s.stack_dark : ''}`}>
         {t('Tech stack :')}
         <span>{item.stack}</span>
       </div>

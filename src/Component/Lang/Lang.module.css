@@ -19,12 +19,13 @@
   border-radius: 50%;
 }
 .lang_select {
-  margin-top: 19px;
+  margin-top: 20px;
   left: -3px;
   position: absolute;
   border-radius: 8px;
   box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
   background: rgb(255, 255, 255);
+  transition: background-color 0.5s ease-in-out;
 }
 .lang_select ul {
   padding: 5px 0;
@@ -44,12 +45,18 @@
 }
 .langDark {
   background-color: #191919;
+  transition: background-color 0.5s ease-in-out;
 }
-.langDark ul > li {
-  color: white;
-}
-.langDark button {
+.langDark_main button {
   color: white;
   background-color: unset;
   border: none;
 }
+.langDark ul > li {
+  color: white;
+}
+/* .langDark button {
+  color: white;
+  background-color: unset;
+  border: none;
+} */
